@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark circular background -->
+  <circle cx="100" cy="100" r="96" fill="url(#bg)" stroke="#2a2a4a" stroke-width="2"/>
+
+  <!-- Gauge: 240-degree arc opening at the bottom -->
+  <!-- Arc from 150deg to 30deg (going clockwise through top) -->
+  <!-- Start point: (100 + 55*cos(150deg), 95 + 55*sin(150deg)) = (52.4, 122.5) -->
+  <!-- End point:   (100 + 55*cos(30deg),  95 + 55*sin(30deg))  = (147.6, 122.5) -->
+
+  <!-- Track (grey background) -->
+  <path d="M 52.4 122.5 A 55 55 0 1 1 147.6 122.5" fill="none" stroke="#2a2a4a" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Green zone: 0-50% -->
+  <path d="M 52.4 122.5 A 55 55 0 0 1 58 72" fill="none" stroke="#4ade80" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Yellow zone: 50-70% -->
+  <path d="M 58 72 A 55 55 0 0 1 100 40" fill="none" stroke="#facc15" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Orange zone: 70-85% -->
+  <path d="M 100 40 A 55 55 0 0 1 137 67" fill="none" stroke="#f97316" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Red zone: 85-100% -->
+  <path d="M 137 67 A 55 55 0 0 1 147.6 122.5" fill="none" stroke="#ef4444" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Needle pointing to ~62% (yellow/warning zone) -->
+  <line x1="100" y1="95" x2="78" y2="52" stroke="#f97316" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="100" cy="95" r="7" fill="#f97316"/>
+  <circle cx="100" cy="95" r="3.5" fill="#1a1a2e"/>
+
+  <!-- Token count -->
+  <text x="100" y="140" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#e2e8f0">4,821</text>
+  <text x="100" y="157" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">tokens</text>
+</svg>

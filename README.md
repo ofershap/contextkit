@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="ai-context-kit" width="120" height="120" />
+</p>
+
 <h1 align="center">ai-context-kit</h1>
 
 <p align="center">
