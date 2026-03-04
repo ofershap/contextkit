@@ -4,26 +4,22 @@
       <stop offset="0%" style="stop-color:#1a1a2e"/>
       <stop offset="100%" style="stop-color:#16213e"/>
     </linearGradient>
+    <linearGradient id="gauge-gradient" x1="0" y1="1" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="40%" stop-color="#facc15"/>
+      <stop offset="70%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
   </defs>
 
   <!-- Dark circular background with visible border -->
   <circle cx="100" cy="100" r="94" fill="url(#bg)" stroke="#4a4a6a" stroke-width="3"/>
 
-  <!-- Gauge: 240-degree arc opening at the bottom -->
-  <!-- Track (grey background) -->
+  <!-- Gauge track (grey background) - 240 degree arc -->
   <path d="M 52.4 122.5 A 55 55 0 1 1 147.6 122.5" fill="none" stroke="#2a2a4a" stroke-width="10" stroke-linecap="round"/>
 
-  <!-- Green zone: 0-50% -->
-  <path d="M 52.4 122.5 A 55 55 0 0 1 58 72" fill="none" stroke="#4ade80" stroke-width="10" stroke-linecap="round"/>
-
-  <!-- Yellow zone: 50-70% -->
-  <path d="M 58 72 A 55 55 0 0 1 100 40" fill="none" stroke="#facc15" stroke-width="10" stroke-linecap="round"/>
-
-  <!-- Orange zone: 70-85% -->
-  <path d="M 100 40 A 55 55 0 0 1 137 67" fill="none" stroke="#f97316" stroke-width="10" stroke-linecap="round"/>
-
-  <!-- Red zone: 85-100% -->
-  <path d="M 137 67 A 55 55 0 0 1 147.6 122.5" fill="none" stroke="#ef4444" stroke-width="10" stroke-linecap="round"/>
+  <!-- Gauge colored arc - single smooth gradient -->
+  <path d="M 52.4 122.5 A 55 55 0 1 1 147.6 122.5" fill="none" stroke="url(#gauge-gradient)" stroke-width="10" stroke-linecap="round"/>
 
   <!-- Needle pointing to ~62% (yellow/warning zone) -->
   <line x1="100" y1="95" x2="78" y2="52" stroke="#f97316" stroke-width="3.5" stroke-linecap="round"/>
