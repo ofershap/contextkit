@@ -19,8 +19,8 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/contextkit"><img src="https://img.shields.io/npm/v/contextkit.svg" alt="npm version" /></a>
-  <a href="https://www.npmjs.com/package/contextkit"><img src="https://img.shields.io/npm/dm/contextkit.svg" alt="npm downloads" /></a>
+  <a href="https://www.npmjs.com/package/contextkit-ai"><img src="https://img.shields.io/npm/v/contextkit-ai.svg" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/contextkit-ai"><img src="https://img.shields.io/npm/dm/contextkit-ai.svg" alt="npm downloads" /></a>
   <a href="https://github.com/ofershap/contextkit/actions/workflows/ci.yml"><img src="https://github.com/ofershap/contextkit/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-strict-blue" alt="TypeScript" /></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
@@ -42,7 +42,7 @@ Research from ETH Zurich (February 2026) measured what actually happens:
 The fix isn't better prose. It's treating context like a budget.
 
 ```typescript
-import { loadRules, measure, lint, select } from "contextkit";
+import { loadRules, measure, lint, select } from "contextkit-ai";
 
 const rules = await loadRules("./");
 const report = measure(rules, 4000);
@@ -57,7 +57,7 @@ Four functions. Load everything, see what it costs, find what's broken, keep wha
 ## Quick Start
 
 ```bash
-npm install contextkit
+npm install contextkit-ai
 ```
 
 Or use the CLI directly:
@@ -226,7 +226,7 @@ npx contextkit init --format agents-md
 contextkit is not tied to any IDE. Use it anywhere you build agents:
 
 ```typescript
-import { loadRules, select } from "contextkit";
+import { loadRules, select } from "contextkit-ai";
 import { generateText } from "ai";
 
 const allRules = await loadRules("./rules");
