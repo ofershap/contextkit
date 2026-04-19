@@ -36,6 +36,10 @@
 
 ---
 
+<p align="center">
+  <img src="assets/demo.gif" alt="Demo" />
+</p>
+
 You write a CLAUDE.md. Then someone adds `.cursor/rules/`. Then a teammate drops in an AGENTS.md. Then someone copies in a `.cursorrules` file from a blog post. Nobody removes the old ones.
 
 Six months later your project has four context files that overlap, contradict each other, and dump 8,000 tokens of directory listings and "follow best practices" into every conversation. Your agent follows all of it. It gets slower. It gets confused. You blame the model.
